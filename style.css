@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(175,238,238);
+}
+
+/* -----------start button---------------- */
+#start-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13%;
+}
+
+#start-btn{
+    width: 450px;
+    height: 300px;
+    background-color: rgba(0, 0, 255, 0.349);
+}
+
+#start-id{
+    font-size: 80px;
+    font-family: 'Potta One', cursive;
+}
