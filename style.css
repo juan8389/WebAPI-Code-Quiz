@@ -3,16 +3,20 @@ body{
 }
 
 /* -----------start button---------------- */
-#start-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 13%;
+#main-div{
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    color:navy;
+    font-weight: bolder;
+    user-select: none;
 }
-
 #start-btn{
-    width: 450px;
-    height: 300px;
+    /* width: 450px; */
+    height:20%;
+    width: 20%;
+    font-size: 1.5 em;
+    /* height: 300px; */
     background-color: rgba(0, 0, 255, 0.349);
 }
 
@@ -20,3 +24,38 @@ body{
     font-size: 80px;
     font-family: 'Potta One', cursive;
 }
+
+#main-div1{
+    margin: auto;
+    border-color: rgb(42, 120, 165);
+    background-color: rgb(210, 250, 250);
+    border-style: solid;
+    height: 500px;
+    width: 800px;
+}
+
+/* -----------timer---------------- */
+
+.time {
+    float:right;
+    text-align: top;
+    color:navy;
+    font-weight: bolder;
+  }
+#timer {
+    font-size: 4em;
+    float: right;
+  }
+
+  }
+  
+  #container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    color:navy;
+    font-weight: bolder;
+    user-select: none;
+}
+  }
+
