@@ -1,10 +1,11 @@
 /* timer */
 
-var startingMinutes = 05;
+var startingMinutes = 01;
 let time = startingMinutes * 60;
 var question = document.getElementById("question");
 var counter = 0;
 var score = 0;
+var readScore = document.querySelector('#scoreContainer')
 question.style.display = "none";
 var gameTimer;
 var timerEl = document.getElementById('timer');
@@ -21,12 +22,11 @@ function updateTimer() {
 
     if (time < 0) {
         clearInterval(gameTimer)
+        var highscoreName = prompt("Please enter your Highscore Nickname");
     }
 
 
 }
-
-console.log("time")
 
 document.getElementById("start-btn").addEventListener("click", function () {
     gameTimer = setInterval(updateTimer, 1000);
@@ -74,7 +74,7 @@ function displayQUestion() {
     question.appendChild(ques);
 
     for (var i = 0; i < questions[counter].choices.length; i++) {
-        console.log("Inside FOR loop");
+        // console.log("Inside FOR loop");
         var ans = document.createElement("button");
         ans.textContent = questions[counter].choices[i];
         ans.setAttribute("data-ans", questions[counter].choices[i]);
@@ -95,39 +95,32 @@ function checkAns() {
     }
     else {
         time = time - 5;
+        score = score - 5;
         //counter++;
         counterCheck();
         displayQUestion();
     }
+    readScore.innerHTML += '<li>' + score.value + '</li>';
+
 }
 
 function counterCheck() {
     if (counter === (questions.length - 1)) {
         endGame();
+        clearInterval(gameTimer)
+        clearInterval(displayQUestion)
+        var highscoreName = prompt("Please enter your Highscore Nickname");
+
     }
     else {
         counter++;
     }
 }
-console.log(time)
+
 function endGame() {
-    console.log("Inside end game");
+
     //hide questions div
     //show div with an inputbox to enter initials
     //store initials and score into the localStorge(you can use localStorage.setItem)
     //Once it's stored in localStorage you can display it on the page as well
 }
-
-
-//Add event listener for answer buttons for class called "answer"
-
-//document.getElementsByClassName("answer").addEventListener()
-
-//grab the data-ans attribute value and store into a variable
-
-//compare user answer against correctAnswer andif answer is correct you can increment the score else reduce the time
-
-//increment the counter value and call displayQuestion function
-
-
-
